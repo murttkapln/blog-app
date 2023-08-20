@@ -14,17 +14,18 @@ const AppRouter = () => {
   return (
     <Router>
       <AppBar />
-      {/* <Routes>
+      {/* <About/> */}
+      <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/" element={<Dashboard />} />
         <Route path="/about" element={<About />} />
-        <Route path="/newblog" element={<PrivateRouter />}>
-          <Route path="/newblog" element={<NewBlog />} />
+        {/* <Route path="/newblog" element={<PrivateRouter />}>
+          <Route index element={<NewBlog />} />
           <Route path="/myblogs" element={<MyBlogs />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/detail/:id" element={<Detail />} />
-        </Route>
-      </Routes> */}
+        </Route> */}
+      </Routes>
       <Footer />
     </Router>
   );

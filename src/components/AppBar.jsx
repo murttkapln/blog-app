@@ -15,9 +15,6 @@ import logo from "../assets/logo.png";
 import avatar from "../assets/avatar.png";
 import { useNavigate } from "react-router-dom";
 
-const pages = ["Products", "Pricing", "Blog"];
-const settings = ["Profile", "Account", "Dashboard", "Logout"];
-
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
@@ -39,12 +36,13 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar position="static">
+    <AppBar position="static"sx={{ backgroundColor: "#95C09A"}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
-            variant="h6"
             noWrap
+            component="a"
+            href="/"
             sx={{
               mr: 2,
               display: { xs: "none", md: "flex" },
@@ -110,7 +108,6 @@ function ResponsiveAppBar() {
             </Menu>
           </Box>
           <Typography
-            variant="h5"
             noWrap
             component="a"
             href="/"
