@@ -9,22 +9,23 @@ import PrivateRouter from "./PrivateRouter";
 import MyBlogs from "../pages/MyBlogs";
 import Profile from "../pages/Profile";
 import Detail from "../pages/Detail";
+import Register from "../pages/Register";
 
 const AppRouter = () => {
   return (
     <Router>
       <AppBar />
-      {/* <About/> */}
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/" element={<Dashboard />} />
         <Route path="/about" element={<About />} />
-        {/* <Route path="/newblog" element={<PrivateRouter />}>
-          <Route index element={<NewBlog />} />
-          <Route path="/myblogs" element={<MyBlogs />} />
-          <Route path="/profile" element={<Profile />} />
-          <Route path="/detail/:id" element={<Detail />} />
-        </Route> */}
+        <Route path="/register" element={<Register/>} />
+        <Route path="/newblog" element={<PrivateRouter />}>
+          <Route path="" element={<NewBlog />} />
+          {/* <Route path="/myblogs" element={<MyBlogs />} /> */}
+          {/* <Route path="/profile" element={<Profile />} /> */}
+          {/* <Route path="/detail/:id" element={<Detail />} /> */}
+        </Route>
       </Routes>
       <Footer />
     </Router>
